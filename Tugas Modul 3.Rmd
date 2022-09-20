@@ -1,0 +1,62 @@
+---
+title: "Tugas modul 3"
+author: "Shania"
+date: "2022-09-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r}
+library(dslabs)
+data(murders)
+```
+## Nomor 1
+a. Terdiri dari 51 negara (Benar)
+
+b. Data berisi tingkat pembunuhan pada 50 negara bagian dan DC (salah)
+
+c. Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada tahun 2010. (Benar)
+
+d. `str` tidak menunjukkan informasi yang relevan.(salah)
+
+##Nomor 2
+```{r}
+head(murders)
+```
+Terdapat Kolom : state, abb, region, population, dan total
+
+## Nomor 3
+```{r}
+a=murders$abb
+a
+```
+jenis `class`
+```{r}
+class(a)
+```
+## Nomor 4
+```{r}
+b=murders[["abb"]]
+b
+```
+jenis `class`
+```{r}
+class(b)
+```
+jenis `class` a dan b adalah sama
+
+## Nomor 5
+```{r}
+length(levels(murders$region))
+```
+Teradapat 4 kategori region pada dataset
+
+
+
+
