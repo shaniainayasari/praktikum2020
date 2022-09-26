@@ -1,0 +1,58 @@
+---
+title: "Tugas Modul 5"
+author: "Shania"
+date: "2022-09-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dslabs)
+data(murders)
+```
+
+## Nomor 1
+```{r}
+new_names <- ifelse(nchar(murders$state)>8, murders$abb, murders$state)
+```
+
+## Nomor 2
+```{r}
+sum_n <- function(n){
+  sum(1:n)
+}
+sum_n(5000)
+```
+## Nomor 3
+```{r}
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+compute_s_n(10)
+```
+## Nomor 4
+```{r}
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+s_n <- vector("numeric", 25)
+for(i in 1:25){
+  s_n[i] <- compute_s_n(i)
+}
+s_n
+```
+## Nomor 5
+```{r}
+compute_s_m <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+s_m <- vector("numeric", 25)
+s_m<-sapply(1:25, compute_s_m)
+s_m
+```
